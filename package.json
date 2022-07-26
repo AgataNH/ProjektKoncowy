@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "heroku-client": "^3.1.0"
+  }
+}

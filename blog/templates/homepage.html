@@ -15,9 +15,9 @@
            <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z"/>
          </svg>
        </a>
-       <form action="{{ url_for('delete_post', entry_id=post.id) }}" method="post">
-       <i type="submit" value="" class="bi bi-trash float-right"></i>
-       </form>
+       <form id="form_{{ post.id }}" action="{{ url_for('delete_post', entry_id=post.id) }}" method="post">
+        <a href="#" class="bi bi-trash float-right" onClick="document.getElementById('form_{{ post.id }}').submit();"></a>
+        </form>
  
        {% endif %}
    </div>
